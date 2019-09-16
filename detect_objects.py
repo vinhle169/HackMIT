@@ -16,7 +16,7 @@ def detect_labels_local_file(photo,bucket=None):
 	return items
 def main():
 	bucket='itemstodetect'
-	photo='hersheys.jpg'
+	photo='sushiplushie.jpg'
 	detected_labels =detect_labels_local_file(photo,bucket)
 	#label_count = detected_labels[0]
 	for i in detected_labels:

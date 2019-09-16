@@ -5,7 +5,7 @@ def detect_text(photo, bucket):
     response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})                       
     textDetections=response['TextDetections']
     items = []
-    #print(textDetections,'textDetections')
+    print(textDetections,'textDetections')
     for text in textDetections:
             if (text['Type']=='LINE') and (text['Confidence']>=85): items.append(text['DetectedText'])
     numdetected = len(textDetections)
@@ -13,7 +13,7 @@ def detect_text(photo, bucket):
 
 def main():
     bucket='itemstodetect'
-    photo='hersheys.jpg'
+    photo='cokeregular.jpeg'
     #photo='abc.jpg'
     text=detect_text(photo,bucket)
     print(text)
