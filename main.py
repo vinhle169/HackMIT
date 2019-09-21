@@ -4,7 +4,7 @@ from googlesearch import search
 import webbrowser
 def main():
 	bucket='itemstodetect'
-	photo='cokeregular.jpeg'
+	photo='cheetos.jpeg'
 	#photo='abc.jpg'
 	text=detect_text(photo,bucket)
 	manywords = False
